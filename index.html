@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+
+        <form class="form" action="#" method="post">
+            <h1 class="main-title">FTL: Прямая линия</h1>
+            <div class="form__input-route">
+                <div class="small-title">
+                    <span class="small-title__circle">1</span>
+                    <span class="small-title__circle">Маршрут</span>
+                </div>
+                <div class="form__from-where">
+                    <div class="form__txt">Откуда</div>
+                    <input class="from-place" type="text">
+                </div>
+                <div class="form__to-where">
+                    <div class="form__txt">Куда</div>
+                    <input class="from-place" type="text">
+                </div>
+            </div>
+
+            <div class="form__transport">
+                <div class="small-title">
+                    <span class="small-title__circle">2</span>
+                    <span class="small-title__circle">Транспорт</span>
+                </div>
+                <div class="wrapper">
+                    <div class="select-wrapper">
+                        <div class="form__txt">Грузоподъемность</div>
+                        <select class="form__select" name="mass" id="mass">
+                            <option class="desaturated" value="not-choosen">не выбрано</option>
+                            <option value="up-to-a-ton">до тонны</option>
+                            <option value="more-than-a-ton">больше</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <div class="form__txt">Способ погрузки</div>
+                        <select class="form__select" name="loading" id="type-loading">
+                                <option class="desaturated" value="not-choosen">не выбрано</option>
+                                <option value="back" selected>задняя</option>
+                                <option value="front">передняя</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__truck">
+                <div class="small-title">
+                    <span class="small-title__circle">3</span>
+                    <span class="small-title__circle">Груз</span>
+                </div>
+                <div class="wrapper">
+                    <div class="select-wrapper">
+                        <div class="form__txt">Грузоподъемность</div>
+                        <select class="form__select" name="mass" id="type-trucking">
+                            <option class="desaturated" value="not-choosen">не выбран</option>
+                            <option value="up-to-a-ton">до тонны</option>
+                            <option value="more-than-a-ton">больше</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <div class="form__txt">Объявленная ценность, &#8381</div>
+                        <select class="form__select" name="mass" id="type-trucking">
+                            <option class="desaturated" value="more-equals">&ge;</option>
+                            <option value="up-to-a-ton">до тонны</option>
+                            <option value="more-than-a-ton">больше</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="checkbox-wrapper">
+                    <input class="checkbox" checked type="checkbox" name="temperature-mode" value="yes">
+                    <div class="form__txt">Требуется температурный режим</div>
+                </div>
+                <div class="wrapper">
+                    <div class="temperature-wrapper">
+                        <div class="temperature-input">
+                            <div class="temperature-txt form__txt">От, &#8451;</div>
+                            <input type="text" name="from-degrees" value="-20">
+                        </div>
+                    </div>
+                    <div class="temperature-wrapper">
+                        <div class="temperature-input">
+                            <div class="temperature-txt form__txt">До, &#8451;</div>
+                            <input type="text" name="till-degreesч" value="+23">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__time">
+                <div class="small-title">
+                    <span class="small-title__circle">4</span>
+                    <span class="small-title__circle">Время</span>
+                </div>
+                <div class="wrapper">
+                    <div class="form__txt">Когда прибыть на точку</div>
+                    <div class="form__txt desaturated">700 км в день</div>
+                </div>
+                <div class="wrapper">
+                    <div class="form__choose-wrapper">
+                        <label for="determined-address"><input class="form__input-choose" type="radio" checked name="address" value="determined-address" id="determined-address">Длинный адрес с градиентом <span class="not-choosen active">НЕ ВЫБРАНО</span></label>
+                    </div>
+                    <div class="form__choose-wrapper">
+                        <label for="unknown-address"><input class="form__input-choose" type="radio" name="address" value="unknown-address" id="unknown-address">Адрес не указан <span class="not-choosen">НЕ ВЫБРАНО</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form__comments">
+                <div class="form__txt">Комментарий к заказу</div>
+                <div class="wrapper">
+                    <textarea class="form__comments" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                </div>
+            </div>
+
+            <div class="form__notice">
+                <div class="wrapper">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
