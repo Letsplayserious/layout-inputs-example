@@ -6,37 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normolize.css">
 </head>
 <body>
     <div class="container">
 
         <form class="form" action="#" method="post">
             <h1 class="main-title">FTL: Прямая линия</h1>
+
             <div class="form__input-route">
                 <div class="small-title">
                     <span class="small-title__circle">1</span>
-                    <span class="small-title__circle">Маршрут</span>
+                    <span class="small-title__txt">Маршрут</span>
                 </div>
-                <div class="form__from-where">
+                <div class="form__input-txt-type">
                     <div class="form__txt">Откуда</div>
-                    <input class="from-place" type="text">
+                    <input class="form-place" type="text">
                 </div>
-                <div class="form__to-where">
+                <div class="form__input-txt-type">
                     <div class="form__txt">Куда</div>
-                    <input class="from-place" type="text">
+                    <input class="form-place" type="text">
                 </div>
             </div>
 
             <div class="form__transport">
                 <div class="small-title">
                     <span class="small-title__circle">2</span>
-                    <span class="small-title__circle">Транспорт</span>
+                    <span class="small-title__txt">Транспорт</span>
                 </div>
                 <div class="wrapper">
                     <div class="select-wrapper">
                         <div class="form__txt">Грузоподъемность</div>
                         <select class="form__select" name="mass" id="mass">
-                            <option class="desaturated" value="not-choosen">не выбрано</option>
+                            <option class="desaturated" value="not-choosen" style="color:#CFCFCF">не выбрано</option>
                             <option value="up-to-a-ton">до тонны</option>
                             <option value="more-than-a-ton">больше</option>
                         </select>
@@ -47,8 +49,7 @@
                                 <option class="desaturated" value="not-choosen">не выбрано</option>
                                 <option value="back" selected>задняя</option>
                                 <option value="front">передняя</option>
-                            </select>
-                        </div>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -56,7 +57,7 @@
             <div class="form__truck">
                 <div class="small-title">
                     <span class="small-title__circle">3</span>
-                    <span class="small-title__circle">Груз</span>
+                    <span class="small-title__txt">Груз</span>
                 </div>
                 <div class="wrapper">
                     <div class="select-wrapper">
@@ -84,7 +85,7 @@
                     <div class="temperature-wrapper">
                         <div class="temperature-input">
                             <div class="temperature-txt form__txt">От, &#8451;</div>
-                            <input type="text" name="from-degrees" value="-20">
+                            <input type="text" name="form-degrees" value="-20">
                         </div>
                     </div>
                     <div class="temperature-wrapper">
@@ -99,7 +100,7 @@
             <div class="form__time">
                 <div class="small-title">
                     <span class="small-title__circle">4</span>
-                    <span class="small-title__circle">Время</span>
+                    <span class="small-title__txt">Время</span>
                 </div>
                 <div class="wrapper">
                     <div class="form__txt">Когда прибыть на точку</div>
@@ -118,7 +119,7 @@
             <div class="form__comments">
                 <div class="form__txt">Комментарий к заказу</div>
                 <div class="wrapper">
-                    <textarea class="form__comments" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                    <textarea class="form__comments" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
                 </div>
             </div>
 

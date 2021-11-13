@@ -1,0 +1,173 @@
+// PRESETS
+
+$white: #fff;
+$black: #000;
+$grey: #CFCFCF;
+$orange:#EF483E;
+
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url(../fonts/HelveticaNeueCyr-Medium.otf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 18px; }
+
+// COMMON PROPERTIES
+
+body{
+    background-color: #343539;
+    font-family: Helvetica Neue, Arial, sans-serif;
+  }
+
+  h1, .form__txt, .small-title, .form__notice{
+    color: $white;
+    letter-spacing:.05em;
+  }
+
+  .form__txt{
+    font-size: 13px;
+  }
+
+  .container{
+    padding: 0 0 0 16px;
+  }
+
+  /*for block 2 and 3*/
+  .select-wrapper+.select-wrapper, .temperature-wrapper+.temperature-wrapper{
+    margin-left: 12px;
+  }
+
+  /*styles for myltiple selects*/
+  .form__select{
+    height: 44px;
+    width: 165px;
+    font-size: 15px;
+  }
+
+
+// H1 AND ROUTE BLOCK
+
+h1{
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+}
+
+.small-title{
+  display: flex;
+  margin-bottom: 16px;
+  line-height: 24px;
+
+  .small-title__circle{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: $orange;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .small-title__txt{
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+}
+
+.form__input-route{
+  margin-bottom: 40px;
+
+  .form__input-txt-type{
+    margin-bottom: 16px;
+    .form__txt{
+      margin-bottom: 8px;
+    }
+    .form-place{
+      height: 44px;
+      width: 343px;
+    }
+  }
+}
+
+
+// TRANSPORT BLOCK
+
+.form__transport{
+  margin-bottom: 40px;
+  .wrapper{
+    display: flex;
+  }
+
+  .form__txt{
+    margin-bottom: 8px;
+  }
+
+
+}
+
+
+// TRUCK BLOCK
+
+.form__truck{
+  margin-bottom: 40px;
+
+  .wrapper{
+    display: flex;
+  }
+
+  .form__txt{
+    margin-bottom: 8px;
+  }
+
+  .select-wrapper+.select-wrapper{
+    margin-bottom: 16px;
+  }
+
+  .checkbox-wrapper{
+    display: flex;
+
+    .checkbox{
+      height: 24px;
+      width: 24px;
+      margin-bottom: 16px;
+    }
+
+    .form__txt{
+      margin-left: 12px;
+      line-height: 24px;
+    }
+  }
+
+  .temperature-input{
+    input{
+      height: 44px;
+      width: 165px;
+    }
+  }
+}
+
+
+// TIME block
+
+.form__time{
+  .wrapper{
+    display: flex;
+    &div:first-of-type{
+      margin-right: 111px;
+    }
+  }
+
+
+
+}
