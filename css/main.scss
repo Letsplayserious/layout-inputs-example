@@ -3,6 +3,7 @@
 $white: #fff;
 $black: #000;
 $grey: #CFCFCF;
+$dark-grey: #4B4B4F;
 $orange:#EF483E;
 
 
@@ -19,7 +20,7 @@ $orange:#EF483E;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-size: 18px; }
+ }
 
 // COMMON PROPERTIES
 
@@ -158,16 +159,111 @@ h1{
 }
 
 
-// TIME block
+// FORM TIME BLOCK
 
 .form__time{
-  .wrapper{
+
+
+  // ОТРЕДАКТИРОВАТЬ РАСПОЛОЖЕНИЕ ТЕКСТА
+  .wrapper:nth-child(2){
     display: flex;
-    &div:first-of-type{
-      margin-right: 111px;
+  }
+
+  .form__choose-wrapper{
+    position: relative;
+    height: 44px;
+    width: 343px;
+    background-color: $dark-grey;
+    font-weight: 400;
+    padding: 13px;
+  }
+
+  .form__choose-label{
+
+    .gradiented-txt{
+      background-color: $grey;
+      background-image: linear-gradient(90deg, rgba(207,207,207,1) 0%, rgba(207,207,207,1) 50%, rgba(100,100,100,1) 75%, rgba(75,75,75,1) 80%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
+  .form__txt{
+    margin-bottom: 16px;
+  }
+
+  .form__choose-wrapper:first-of-type{
+    margin-bottom: 4px;
+  }
+
+  .form__choose-wrapper:nth-of-type(2){
+    margin-bottom: 16px;
+  }
+
+  label{
+    // display: flex;
+    font-size: 15px;
+    line-height: 19px;
+    color: $grey;
+
+    input{
+      margin-right: 8px;
+    }
+
+  }
+
+  .not-choosen{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 24px;
+    width: 119px;
+    padding: 4 14px;
+    border-radius: 2px;
+    background-color: #56565a;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    color: #818181;
+  }
+
+  .active{
+    color: $white;
+    background-color: #717171;
+  }
+}
 
 
+// COMMENTS BLOCK
+
+.form__comments{
+  margin-bottom: 40px;
+  textarea{
+    min-height: 80px;
+    width: 343px;
+    padding: 13px 14px;
+    font-size: 15px;
+    resize: none;
+    margin: 0;
+
+    &::placeholder{
+      color: #CFCFCF;
+    }
+  }
+
+  .form__txt{
+    margin-bottom: 16px;
+  }
+}
+
+.form__notice{
+  margin-bottom: 37px;
+  .wrapper{
+    height: 104px;
+    width: 343px;
+    padding: 24px;
+    background-color: $dark-grey;
+    font-size: 15px;
+    color: $white;
+  }
 }

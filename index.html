@@ -39,8 +39,11 @@
                         <div class="form__txt">Грузоподъемность</div>
                         <select class="form__select" name="mass" id="mass">
                             <option class="desaturated" value="not-choosen" style="color:#CFCFCF">не выбрано</option>
-                            <option value="up-to-a-ton">до тонны</option>
-                            <option value="more-than-a-ton">больше</option>
+                            <option value="var-1">Вариант 1</option>
+                            <option value="var-2">Вариант 2</option>
+                            <option value="var-3">Вариант 3</option>
+                            <option value="var-4">Вариант 4</option>
+                            <option value="var-5">Вариант 5</option>
                         </select>
                     </div>
                     <div class="select-wrapper">
@@ -61,7 +64,7 @@
                 </div>
                 <div class="wrapper">
                     <div class="select-wrapper">
-                        <div class="form__txt">Грузоподъемность</div>
+                        <div class="form__txt">Тип груза</div>
                         <select class="form__select" name="mass" id="type-trucking">
                             <option class="desaturated" value="not-choosen">не выбран</option>
                             <option value="up-to-a-ton">до тонны</option>
@@ -69,11 +72,11 @@
                         </select>
                     </div>
                     <div class="select-wrapper">
-                        <div class="form__txt">Объявленная ценность, &#8381</div>
+                        <div class="form__txt">Ценность, &#8381</div>
                         <select class="form__select" name="mass" id="type-trucking">
                             <option class="desaturated" value="more-equals">&ge;</option>
-                            <option value="up-to-a-ton">до тонны</option>
-                            <option value="more-than-a-ton">больше</option>
+                            <option value="up-to-a-thousand">до 1000</option>
+                            <option value="more-than-a-thousand">больше 1000</option>
                         </select>
                     </div>
                 </div>
@@ -108,10 +111,10 @@
                 </div>
                 <div class="wrapper">
                     <div class="form__choose-wrapper">
-                        <label for="determined-address"><input class="form__input-choose" type="radio" checked name="address" value="determined-address" id="determined-address">Длинный адрес с градиентом <span class="not-choosen active">НЕ ВЫБРАНО</span></label>
+                        <label class="form__choose-label" for="determined-address"><input class="form__input-choose" type="radio" checked name="address" value="determined-address" id="determined-address"><span class="gradiented-txt">Длинный адрес с градиентом</span><span class="not-choosen active">НЕ ВЫБРАНО</span></label>
                     </div>
                     <div class="form__choose-wrapper">
-                        <label for="unknown-address"><input class="form__input-choose" type="radio" name="address" value="unknown-address" id="unknown-address">Адрес не указан <span class="not-choosen">НЕ ВЫБРАНО</span></label>
+                        <label class="form__choose-label" for="unknown-address"><input class="form__input-choose" type="radio" name="address" value="unknown-address" id="unknown-address"><span>Адрес с градиентом</span><span class="not-choosen">НЕ ВЫБРАНО</span></label>
                     </div>
                 </div>
             </div>
