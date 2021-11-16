@@ -82,13 +82,38 @@ h1 {
   .form__truck .select-wrapper + .select-wrapper {
     margin-bottom: 16px; }
   .form__truck .checkbox-wrapper {
-    display: flex; }
-    .form__truck .checkbox-wrapper .checkbox {
+    display: flex;
+    position: relative;
+    cursor: pointer; }
+    .form__truck .checkbox-wrapper input[type=checkbox] {
+      visibility: hidden; }
+    .form__truck .checkbox-wrapper .fake-checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 24px;
       width: 24px;
-      margin-bottom: 16px; }
+      background-color: white; }
+    .form__truck .checkbox-wrapper input:checked ~ .fake-checkbox {
+      background-color: #EF483E; }
+    .form__truck .checkbox-wrapper .fake-checkbox:after {
+      content: "";
+      position: absolute;
+      display: none; }
+    .form__truck .checkbox-wrapper input:checked ~ .fake-checkbox:after {
+      display: flex; }
+    .form__truck .checkbox-wrapper .fake-checkbox:after {
+      left: 8px;
+      bottom: 5px;
+      width: 6px;
+      height: 12px;
+      border: solid white;
+      border-width: 0 4px 4px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
     .form__truck .checkbox-wrapper .form__txt {
-      margin-left: 12px;
+      margin-left: 24px;
       line-height: 24px; }
   .form__truck .temperature-input input {
     height: 44px;

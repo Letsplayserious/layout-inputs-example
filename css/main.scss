@@ -137,15 +137,58 @@ h1{
 
   .checkbox-wrapper{
     display: flex;
+    position: relative;
+    cursor: pointer;
+    // font-size: 24px;
+    // .checkbox{
+    //   padding: 4px;
+    //   height: 24px;
+    //   width: 24px;
+    //   margin-bottom: 16px;
+    // }
 
-    .checkbox{
-      height: 24px;
-      width: 24px;
-      margin-bottom: 16px;
+    input[type=checkbox] {
+      visibility: hidden;
     }
 
+    .fake-checkbox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 24px;
+        width: 24px;
+        background-color: white;
+    }
+
+    input:checked ~ .fake-checkbox {
+      background-color: $orange;
+  }
+
+
+  .fake-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+  input:checked ~ .fake-checkbox:after {
+    display: flex;
+  }
+
+  .fake-checkbox:after {
+    left: 8px;
+    bottom: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
     .form__txt{
-      margin-left: 12px;
+      margin-left: 24px;
       line-height: 24px;
     }
   }
@@ -201,7 +244,6 @@ h1{
   }
 
   label{
-    // display: flex;
     font-size: 15px;
     line-height: 19px;
     color: $grey;
