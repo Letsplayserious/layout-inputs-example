@@ -114,7 +114,6 @@ h1{
     margin-bottom: 8px;
   }
 
-
 }
 
 
@@ -135,22 +134,18 @@ h1{
     margin-bottom: 16px;
   }
 
+  // Checkbox styles
+
   .checkbox-wrapper{
     display: flex;
     position: relative;
     cursor: pointer;
-    // font-size: 24px;
-    // .checkbox{
-    //   padding: 4px;
-    //   height: 24px;
-    //   width: 24px;
-    //   margin-bottom: 16px;
-    // }
 
+    /*hide checkbox*/
     input[type=checkbox] {
       visibility: hidden;
     }
-
+    /* create fake checkbox*/
     .fake-checkbox{
         position: absolute;
         top: 0;
@@ -169,8 +164,8 @@ h1{
     content: "";
     position: absolute;
     display: none;
-}
-
+  }
+  /*styles for toggling*/
   input:checked ~ .fake-checkbox:after {
     display: flex;
   }
@@ -186,6 +181,8 @@ h1{
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+// end checkbox
 
     .form__txt{
       margin-left: 24px;
@@ -222,7 +219,10 @@ h1{
   }
 
   .form__choose-label{
+    display: flex;
+  }
 
+  .form__choose-wrapper:first-child{
     .gradiented-txt{
       background-color: $grey;
       background-image: linear-gradient(90deg, rgba(207,207,207,1) 0%, rgba(207,207,207,1) 50%, rgba(100,100,100,1) 75%, rgba(75,75,75,1) 80%);
@@ -273,6 +273,52 @@ h1{
     color: $white;
     background-color: #717171;
   }
+
+  .gradiented-txt, .not-choosen{
+    margin-left: 8px;
+  }
+
+  // radio styles
+
+  /*hide radio*/
+  .form__input-choose{
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /*create fake radio*/
+  .fake-checkbox{
+    position: relative;
+  }
+
+  .fake-checkbox::before{
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 4x solid $white;
+    border-radius: 16px;
+    background-color: #fff;
+  }
+
+  .fake-checkbox::after{
+    top: 4px;
+    left: 4px;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: $dark-grey;
+  }
+
+  /*change radio styles than checked*/
+  .form__input-choose:checked + .fake-checkbox::before{
+    background-color: $orange;
+  }
+
+  // end of radio styles
 }
 
 

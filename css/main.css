@@ -84,7 +84,10 @@ h1 {
   .form__truck .checkbox-wrapper {
     display: flex;
     position: relative;
-    cursor: pointer; }
+    cursor: pointer;
+    /*hide checkbox*/
+    /* create fake checkbox*/
+    /*styles for toggling*/ }
     .form__truck .checkbox-wrapper input[type=checkbox] {
       visibility: hidden; }
     .form__truck .checkbox-wrapper .fake-checkbox {
@@ -119,48 +122,82 @@ h1 {
     height: 44px;
     width: 165px; }
 
-.form__time .wrapper:nth-child(2) {
-  display: flex; }
-.form__time .form__choose-wrapper {
-  position: relative;
-  height: 44px;
-  width: 343px;
-  background-color: #4B4B4F;
-  font-weight: 400;
-  padding: 13px; }
-.form__time .form__choose-label .gradiented-txt {
-  background-color: #CFCFCF;
-  background-image: linear-gradient(90deg, #cfcfcf 0%, #cfcfcf 50%, #646464 75%, #4b4b4b 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; }
-.form__time .form__txt {
-  margin-bottom: 16px; }
-.form__time .form__choose-wrapper:first-of-type {
-  margin-bottom: 4px; }
-.form__time .form__choose-wrapper:nth-of-type(2) {
-  margin-bottom: 16px; }
-.form__time label {
-  font-size: 15px;
-  line-height: 19px;
-  color: #CFCFCF; }
-  .form__time label input {
-    margin-right: 8px; }
-.form__time .not-choosen {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  height: 24px;
-  width: 119px;
-  padding: 4 14px;
-  border-radius: 2px;
-  background-color: #56565a;
-  line-height: 24px;
-  font-size: 13px;
-  text-align: center;
-  color: #818181; }
-.form__time .active {
-  color: #fff;
-  background-color: #717171; }
+.form__time {
+  /*hide radio*/
+  /*create fake radio*/
+  /*change radio styles than checked*/ }
+  .form__time .wrapper:nth-child(2) {
+    display: flex; }
+  .form__time .form__choose-wrapper {
+    position: relative;
+    height: 44px;
+    width: 343px;
+    background-color: #4B4B4F;
+    font-weight: 400;
+    padding: 13px; }
+  .form__time .form__choose-label {
+    display: flex; }
+  .form__time .form__choose-wrapper:first-child .gradiented-txt {
+    background-color: #CFCFCF;
+    background-image: linear-gradient(90deg, #cfcfcf 0%, #cfcfcf 50%, #646464 75%, #4b4b4b 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
+  .form__time .form__txt {
+    margin-bottom: 16px; }
+  .form__time .form__choose-wrapper:first-of-type {
+    margin-bottom: 4px; }
+  .form__time .form__choose-wrapper:nth-of-type(2) {
+    margin-bottom: 16px; }
+  .form__time label {
+    font-size: 15px;
+    line-height: 19px;
+    color: #CFCFCF; }
+    .form__time label input {
+      margin-right: 8px; }
+  .form__time .not-choosen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 24px;
+    width: 119px;
+    padding: 4 14px;
+    border-radius: 2px;
+    background-color: #56565a;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    color: #818181; }
+  .form__time .active {
+    color: #fff;
+    background-color: #717171; }
+  .form__time .gradiented-txt, .form__time .not-choosen {
+    margin-left: 8px; }
+  .form__time .form__input-choose {
+    position: absolute;
+    z-index: -1;
+    opacity: 0; }
+  .form__time .fake-checkbox {
+    position: relative; }
+  .form__time .fake-checkbox::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 4x solid #fff;
+    border-radius: 16px;
+    background-color: #fff; }
+  .form__time .fake-checkbox::after {
+    top: 4px;
+    left: 4px;
+    position: absolute;
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: #4B4B4F; }
+  .form__time .form__input-choose:checked + .fake-checkbox::before {
+    background-color: #EF483E; }
 
 .form__comments {
   margin-bottom: 40px; }
