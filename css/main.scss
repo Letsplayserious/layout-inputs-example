@@ -38,9 +38,18 @@ body{
     font-size: 13px;
   }
 
-  .container{
-    padding: 0 0 0 16px;
+  @media(min-width:320px){
+    .container{
+      padding: 0 16px;
+    }
   }
+
+  @media(min-width:520px){
+    .container{
+      padding: 0 2em;
+    }
+  }
+
 
   /*for block 2 and 3*/
   .select-wrapper+.select-wrapper, .temperature-wrapper+.temperature-wrapper{
@@ -50,7 +59,6 @@ body{
   /*styles for myltiple selects*/
   .form__select{
     height: 44px;
-    width: 165px;
     font-size: 15px;
   }
 
@@ -94,9 +102,14 @@ h1{
     .form__txt{
       margin-bottom: 8px;
     }
-    .form-place{
-      height: 44px;
-      width: 343px;
+
+    @media(min-width:320px){
+      .form-place{
+        display: block;
+        height: 44px;
+        width: 100%;
+        max-width: 728px;
+      }
     }
   }
 }
@@ -104,7 +117,25 @@ h1{
 
 // TRANSPORT BLOCK
 
+// !! Исправить эти медиа запросы, они не нужны
+@media(min-width:320px){
+  // media-styles for 1, 2, 3 block
+  .select-wrapper{
+    width: 100%;
+  }
+  .form__select{
+    width: 100%;
+  }
+
+  // media-styles for 3.5 block
+  .temperature-wrapper{
+    width: 100%;
+  }
+
+}
+
 .form__transport{
+  max-width: 356px;
   margin-bottom: 40px;
   .wrapper{
     display: flex;
@@ -116,10 +147,10 @@ h1{
 
 }
 
-
 // TRUCK BLOCK
 
 .form__truck{
+  max-width: 356px;
   margin-bottom: 40px;
 
   .wrapper{
@@ -193,7 +224,7 @@ h1{
   .temperature-input{
     input{
       height: 44px;
-      width: 165px;
+      width: 100%;
     }
   }
 }
@@ -202,17 +233,20 @@ h1{
 // FORM TIME BLOCK
 
 .form__time{
-
-
-  // ОТРЕДАКТИРОВАТЬ РАСПОЛОЖЕНИЕ ТЕКСТА
   .wrapper:nth-child(2){
     display: flex;
+    width: 100%;
+    max-width: 728px;
+    justify-content: space-between;
+    @media(min-width: 320px){
+    }
   }
 
   .form__choose-wrapper{
     position: relative;
     height: 44px;
-    width: 343px;
+    width: 100%;
+    max-width: 728px;
     background-color: $dark-grey;
     font-weight: 400;
     padding: 13px;
@@ -222,13 +256,26 @@ h1{
     display: flex;
   }
 
+  // styles for vanishing gradient
   .form__choose-wrapper:first-child{
-    .gradiented-txt{
-      background-color: $grey;
-      background-image: linear-gradient(90deg, rgba(207,207,207,1) 0%, rgba(207,207,207,1) 50%, rgba(100,100,100,1) 75%, rgba(75,75,75,1) 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    @media(max-width:414px){
+      .gradiented-txt{
+        background-color: $grey;
+        background-image: linear-gradient(90deg, rgba(207,207,207,1) 0%, rgba(207,207,207,1) 50%, rgba(100,100,100,1) 75%, rgba(75,75,75,1) 80%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
+
+    @media(max-width:520px){
+      .gradiented-txt{
+        background-color: $grey;
+        background-image: linear-gradient(90deg, rgba(207,207,207,1) 0%, rgba(207,207,207,1) 50%, rgba(100,100,100,1) 90%, rgba(75,75,75,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
   }
 
   .form__txt{
@@ -328,12 +375,12 @@ h1{
   margin-bottom: 40px;
   textarea{
     min-height: 80px;
-    width: 343px;
     padding: 13px 14px;
     font-size: 15px;
     resize: none;
     margin: 0;
-
+    width: 100%;
+    max-width: 728px;
     &::placeholder{
       color: #CFCFCF;
     }
@@ -348,7 +395,8 @@ h1{
   margin-bottom: 37px;
   .wrapper{
     height: 104px;
-    width: 343px;
+    width: 100%;
+    max-width: 728px;
     padding: 24px;
     background-color: $dark-grey;
     font-size: 15px;
