@@ -38,7 +38,11 @@ body{
     font-size: 13px;
   }
 
-  @media(min-width:320px){
+  .container{
+    position: relative;
+  }
+
+  @media(max-width:520px){
     .container{
       padding: 0 16px;
     }
@@ -46,7 +50,19 @@ body{
 
   @media(min-width:520px){
     .container{
-      padding: 0 2em;
+      padding: 0 4vw;
+    }
+  }
+
+  @media(min-width:520px){
+    .container{
+      padding: 0 8vw;
+    }
+  }
+
+  @media(min-width:1024px){
+    .container{
+      padding: 0 170px;
     }
   }
 
@@ -117,22 +133,9 @@ h1{
 
 // TRANSPORT BLOCK
 
-// !! Исправить эти медиа запросы, они не нужны
-@media(min-width:320px){
-  // media-styles for 1, 2, 3 block
-  .select-wrapper{
+  .select-wrapper, .form__select, .temperature-wrapper{
     width: 100%;
   }
-  .form__select{
-    width: 100%;
-  }
-
-  // media-styles for 3.5 block
-  .temperature-wrapper{
-    width: 100%;
-  }
-
-}
 
 .form__transport{
   max-width: 356px;
@@ -145,6 +148,37 @@ h1{
     margin-bottom: 8px;
   }
 
+  // select menu styles
+  ul{
+    list-style: none;
+    background-color: $white;
+
+    &:hover ~ li:not(.desaturated){
+      display: block;
+    }
+
+    li{
+      position: relative;
+      z-index: 2;
+      padding: 14px 13px;
+      padding-left: 16px;
+      background-color: $white;
+      cursor: pointer;
+    }
+
+    li:not(.desaturated){
+      display: none;
+    }
+
+    li:not(.desaturated):hover{
+      background-color: $orange;
+      color: $white;
+    }
+  }
+
+  ul:hover li{
+    display: block;
+  }
 }
 
 // TRUCK BLOCK
@@ -223,6 +257,7 @@ h1{
 
   .temperature-input{
     input{
+      padding-left: 14px;
       height: 44px;
       width: 100%;
     }
@@ -401,5 +436,16 @@ h1{
     background-color: $dark-grey;
     font-size: 15px;
     color: $white;
+  }
+}
+
+@media(min-width:1300px){
+  .form__notice{
+    position: absolute;
+    top: 58px;
+    left: 914px;
+    width: 356px;
+    height: 102px;
+    box-shadow: 0px 10px 20px 0px #0000001A;
   }
 }

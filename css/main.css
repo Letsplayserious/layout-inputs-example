@@ -21,12 +21,21 @@ h1, .form__txt, .small-title, .form__notice {
 .form__txt {
   font-size: 13px; }
 
-@media (min-width: 320px) {
+.container {
+  position: relative; }
+
+@media (max-width: 520px) {
   .container {
     padding: 0 16px; } }
 @media (min-width: 520px) {
   .container {
-    padding: 0 2em; } }
+    padding: 0 4vw; } }
+@media (min-width: 520px) {
+  .container {
+    padding: 0 8vw; } }
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 170px; } }
 /*for block 2 and 3*/
 .select-wrapper + .select-wrapper, .temperature-wrapper + .temperature-wrapper {
   margin-left: 12px; }
@@ -71,15 +80,9 @@ h1 {
         width: 100%;
         max-width: 728px; } }
 
-@media (min-width: 320px) {
-  .select-wrapper {
-    width: 100%; }
+.select-wrapper, .form__select, .temperature-wrapper {
+  width: 100%; }
 
-  .form__select {
-    width: 100%; }
-
-  .temperature-wrapper {
-    width: 100%; } }
 .form__transport {
   max-width: 356px;
   margin-bottom: 40px; }
@@ -87,6 +90,25 @@ h1 {
     display: flex; }
   .form__transport .form__txt {
     margin-bottom: 8px; }
+  .form__transport ul {
+    list-style: none;
+    background-color: #fff; }
+    .form__transport ul:hover ~ li:not(.desaturated) {
+      display: block; }
+    .form__transport ul li {
+      position: relative;
+      z-index: 2;
+      padding: 14px 13px;
+      padding-left: 16px;
+      background-color: #fff;
+      cursor: pointer; }
+    .form__transport ul li:not(.desaturated) {
+      display: none; }
+    .form__transport ul li:not(.desaturated):hover {
+      background-color: #EF483E;
+      color: #fff; }
+  .form__transport ul:hover li {
+    display: block; }
 
 .form__truck {
   max-width: 356px;
@@ -135,6 +157,7 @@ h1 {
       margin-left: 24px;
       line-height: 24px; }
   .form__truck .temperature-input input {
+    padding-left: 14px;
     height: 44px;
     width: 100%; }
 
@@ -251,5 +274,14 @@ h1 {
     background-color: #4B4B4F;
     font-size: 15px;
     color: #fff; }
+
+@media (min-width: 1300px) {
+  .form__notice {
+    position: absolute;
+    top: 58px;
+    left: 914px;
+    width: 356px;
+    height: 102px;
+    box-shadow: 0px 10px 20px 0px #0000001A; } }
 
 /*# sourceMappingURL=main.css.map */
