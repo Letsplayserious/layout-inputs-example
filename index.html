@@ -37,29 +37,20 @@
                 <div class="wrapper">
                     <div class="select-wrapper">
                         <div class="form__txt">Грузоподъемность</div>
-                        <select class="form__select" name="mass" id="mass">
-                            <option class="desaturated" value="not-choosen" style="color:#CFCFCF">не выбрано</option>
-                            <option value="var-1">Вариант 1</option>
-                            <option value="var-2">Вариант 2</option>
-                            <option value="var-3">Вариант 3</option>
-                            <option value="var-4">Вариант 4</option>
-                            <option value="var-5">Вариант 5</option>
-                        </select>
+                        <ul class="form__select">
+                            <li class="desaturated" value="not-choosen" name="not-choosen"><span>Не выбрана</span><span class="iconify" data-icon="fa:angle-down"></span></li>
+                            <li value="var-1" name="var-1">Вариант 1</li>
+                            <li value="var-2" name="var-2">Вариант 2</li>
+                            <li value="var-3" name="var-3">Вариант 3</li>
+                            <li value="var-4" name="var-4">Вариант 4</li>
+                            <li value="var-5" name="var-5">Вариант 5</li>
+                        </ul>
                     </div>
                     <div class="select-wrapper">
                         <div class="form__txt">Способ погрузки</div>
-                        <!-- <select class="form__select" name="loading" id="type-loading">
-                                <option class="desaturated" value="not-choosen" style="color:#CFCFCF">не выбрано</option>
-                                <option value="back" selected>задняя</option>
-                                <option value="front">передняя</option>
-                        </select> -->
                         <ul class="form__select">
-                            <li class="desaturated">не выбрано</li>
-                            <li>вариант 1</li>
-                            <li>вариант 2</li>
-                            <li>вариант 3</li>
-                            <li>вариант 4</li>
-                            <li>вариант 5</li>
+                            <li value="var-1" name="var-1"><span>Задняя</span><span class="iconify" data-icon="fa:angle-down"></span></li>
+                            <li value="var-2" name="var-2">Передняя</li>
                         </ul>
                     </div>
                 </div>
@@ -73,19 +64,22 @@
                 <div class="wrapper">
                     <div class="select-wrapper">
                         <div class="form__txt">Тип груза</div>
-                        <select class="form__select" name="mass" id="type-trucking">
-                            <option class="desaturated" value="not-choosen" style="color:#CFCFCF">не выбран</option>
-                            <option value="up-to-a-ton">до тонны</option>
-                            <option value="more-than-a-ton">больше</option>
-                        </select>
+                        <ul class="form__select">
+                            <li class="desaturated" value="not-choosen" name="not-choosen"><span>Не выбран</span><span class="iconify" data-icon="fa:angle-down"></span></li>
+                            <li value="var-1" name="var-1">Вариант 1</li>
+                            <li value="var-2" name="var-2">Вариант 2</li>
+                            <li value="var-3" name="var-3">Вариант 3</li>
+                            <li value="var-4" name="var-4">Вариант 4</li>
+                            <li value="var-5" name="var-5">Вариант 5</li>
+                        </ul>
                     </div>
                     <div class="select-wrapper">
-                        <div class="form__txt">Ценность, &#8381</div>
-                        <select class="form__select" name="mass" id="type-trucking">
-                            <option class="desaturated" value="more-equals" style="color:#CFCFCF">&ge;</option>
-                            <option value="up-to-a-thousand">до 1000</option>
-                            <option value="more-than-a-thousand">больше 1000</option>
-                        </select>
+                        <div class="temperature-wrapper">
+                            <div class="temperature-input">
+                                <div class="temperature-txt form__txt">Ценность, &#8381</div>
+                                <input type="text" name="form-degrees" value="&ge; 1">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="checkbox-wrapper">
@@ -98,13 +92,13 @@
                     <div class="temperature-wrapper">
                         <div class="temperature-input">
                             <div class="temperature-txt form__txt">От, &#8451;</div>
-                            <input type="text" name="form-degrees" value="-20">
+                            <input type="number" name="form-degrees" value="-20">
                         </div>
                     </div>
                     <div class="temperature-wrapper">
                         <div class="temperature-input">
                             <div class="temperature-txt form__txt">До, &#8451;</div>
-                            <input type="text" name="till-degreesч" value="+23">
+                            <input type="text" name="till-degrees" value="+23">
                         </div>
                     </div>
                 </div>
@@ -141,5 +135,6 @@
             </div>
         </form>
     </div>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 </body>
 </html>

@@ -147,45 +147,89 @@ h1{
   .form__txt{
     margin-bottom: 8px;
   }
+}
 
-  // select menu styles
-  ul{
-    list-style: none;
-    background-color: $white;
+// select menu styles
+ul{
+  list-style: none;
+  background-color: $white;
 
-    &:hover ~ li:not(.desaturated){
-      display: block;
-    }
-
-    li{
-      position: relative;
-      z-index: 2;
-      padding: 14px 13px;
-      padding-left: 16px;
-      background-color: $white;
-      cursor: pointer;
-    }
-
-    li:not(.desaturated){
-      display: none;
-    }
-
-    li:not(.desaturated):hover{
-      background-color: $orange;
-      color: $white;
-    }
-  }
-
-  ul:hover li{
+  &:hover ~ li:not(.desaturated){
     display: block;
   }
+  &:hover ~ .iconify{
+    transform: rotate(180deg);
+    transition: .5s;
+  }
+
+  li{
+    position: relative;
+    z-index: 2;
+    padding: 14px 13px;
+    padding-left: 16px;
+    background-color: $white;
+    cursor: pointer;
+  }
+
+  li:not(.desaturated){
+    display: none;
+  }
+
+  li:not(.desaturated):hover{
+    background-color: $orange;
+    color: $white;
+  }
+
+  li.desaturated{
+    display: flex;
+    justify-content: space-between;
+    color: $grey;
+  }
+
+  &:hover .iconify{
+    transform: rotate(180deg);
+    transition: .5s;
+  }
 }
+
+// styles for second dropdown menu
+ul:hover li{
+  display: flex;
+}
+
+.select-wrapper:nth-child(2) .form__select li{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+.select-wrapper:nth-child(2) .form__select li:first-child{
+  background-color: $white;
+  color: $black;
+}
+
+.select-wrapper:nth-child(2) ul li:not(:first-of-type){
+  display: none;
+}
+
+.select-wrapper:nth-child(2) ul:hover{
+  & li{
+    display: flex;
+  }
+}
+
 
 // TRUCK BLOCK
 
 .form__truck{
   max-width: 356px;
   margin-bottom: 40px;
+
+  // improving dropdown layers
+  li{
+    z-index: 1;
+  }
 
   .wrapper{
     display: flex;
@@ -258,11 +302,23 @@ h1{
   .temperature-input{
     input{
       padding-left: 14px;
-      height: 44px;
+      height: 46px;
       width: 100%;
     }
-  }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
 }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+      }
+    }
 
 
 // FORM TIME BLOCK

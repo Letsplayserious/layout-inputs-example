@@ -90,29 +90,57 @@ h1 {
     display: flex; }
   .form__transport .form__txt {
     margin-bottom: 8px; }
-  .form__transport ul {
-    list-style: none;
-    background-color: #fff; }
-    .form__transport ul:hover ~ li:not(.desaturated) {
-      display: block; }
-    .form__transport ul li {
-      position: relative;
-      z-index: 2;
-      padding: 14px 13px;
-      padding-left: 16px;
-      background-color: #fff;
-      cursor: pointer; }
-    .form__transport ul li:not(.desaturated) {
-      display: none; }
-    .form__transport ul li:not(.desaturated):hover {
-      background-color: #EF483E;
-      color: #fff; }
-  .form__transport ul:hover li {
+
+ul {
+  list-style: none;
+  background-color: #fff; }
+  ul:hover ~ li:not(.desaturated) {
     display: block; }
+  ul:hover ~ .iconify {
+    transform: rotate(180deg);
+    transition: .5s; }
+  ul li {
+    position: relative;
+    z-index: 2;
+    padding: 14px 13px;
+    padding-left: 16px;
+    background-color: #fff;
+    cursor: pointer; }
+  ul li:not(.desaturated) {
+    display: none; }
+  ul li:not(.desaturated):hover {
+    background-color: #EF483E;
+    color: #fff; }
+  ul li.desaturated {
+    display: flex;
+    justify-content: space-between;
+    color: #CFCFCF; }
+  ul:hover .iconify {
+    transform: rotate(180deg);
+    transition: .5s; }
+
+ul:hover li {
+  display: flex; }
+
+.select-wrapper:nth-child(2) .form__select li {
+  display: flex;
+  justify-content: space-between; }
+
+.select-wrapper:nth-child(2) .form__select li:first-child {
+  background-color: #fff;
+  color: #000; }
+
+.select-wrapper:nth-child(2) ul li:not(:first-of-type) {
+  display: none; }
+
+.select-wrapper:nth-child(2) ul:hover li {
+  display: flex; }
 
 .form__truck {
   max-width: 356px;
   margin-bottom: 40px; }
+  .form__truck li {
+    z-index: 1; }
   .form__truck .wrapper {
     display: flex; }
   .form__truck .form__txt {
@@ -156,10 +184,19 @@ h1 {
     .form__truck .checkbox-wrapper .form__txt {
       margin-left: 24px;
       line-height: 24px; }
-  .form__truck .temperature-input input {
-    padding-left: 14px;
-    height: 44px;
-    width: 100%; }
+  .form__truck .temperature-input {
+    /* Chrome, Safari, Edge, Opera */
+    /* Firefox */ }
+    .form__truck .temperature-input input {
+      padding-left: 14px;
+      height: 46px;
+      width: 100%; }
+    .form__truck .temperature-input input::-webkit-outer-spin-button,
+    .form__truck .temperature-input input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+    .form__truck .temperature-input input[type=number] {
+      -moz-appearance: textfield; }
 
 .form__time {
   /*hide radio*/
